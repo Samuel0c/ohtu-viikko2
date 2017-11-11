@@ -1,0 +1,5 @@
+# ignore tiedosto nimellä
+
+build
+
+/.gradle
