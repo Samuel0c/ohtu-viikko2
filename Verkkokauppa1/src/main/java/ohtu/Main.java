@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/spring-context.xml");
         
-        Kirjanpito kirjanpito = (Kirjanpito) ctx.getBean("Kirjanpito");
-        Kauppa kauppa = (Kauppa) ctx.getBean("Kauppa");
+        Kirjanpito kirjanpito = (Kirjanpito) ctx.getBean(Kirjanpito.class);
+        Kauppa kauppa = (Kauppa) ctx.getBean(Kauppa.class);
 
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
