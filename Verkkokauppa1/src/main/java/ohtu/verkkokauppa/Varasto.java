@@ -4,19 +4,19 @@ import java.util.*;
 
 public class Varasto implements VarastoInterface {
     
-    private Kirjanpitonterface kirjanpito;
+    private KirjanpitoInterface kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
     
-    public Varasto(Kirjanpitonterface kirjanpito) {
+    public Varasto(KirjanpitoInterface kirjanpito) {
         this.kirjanpito = kirjanpito;
-        saldot = new HashMap<Tuote, Integer>();
+        this.saldot = new HashMap<Tuote, Integer>();
         alustaTuotteet();
     }
             
     @Override
     public Tuote haeTuote(int id){
         for (Tuote t : saldot.keySet()) {
-            if ( t.getId()==id) return t;
+            if (t.getId() == id) return t;
         }
         
         return null;
